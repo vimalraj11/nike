@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike shop</title>
+    <link rel="shortcut icon" href="img/01.png" sizes = "180x180"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/main0.css">
+</head>
+<body class="bg-light">
+    <div class="container-fulid" style="margin-top: 10%; width: 98%;">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-5">
+                <h1 class="text-primary font-weight-bold">Nike Shop</h1>
+                <p>Nike helps you to but quality things whatever you want</p>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="username-login" placeholder="Enter user name" name="uname">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password-login" placeholder="Enter password" name="pwd">
+                    </div>
+                    <div>
+                        <button class="btn btn-primary btn-block center-block" onclick="check()">Login</button>
+                    </div>
+                    <div>
+                        <br>
+                        <p class="text-center"><a href="*">forgot password?</a></p>
+                    </div>
+                    <hr>
+                    <div>
+                        <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Create New Account</button>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                        
+                        <!-- Modal content-->
+                        <div class="modal-content p-10px">
+                            <div class="modal-header">
+                                <h2 class="modal-title">Sign Up</h2>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="firstname" placeholder="First name" name="firstname">                                
+                                            <span id="error-msg-if-null"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="surname" placeholder="Surname" name="surname">
+                                            <span id="error-surname-msg-if-null"></span> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="username" placeholder="Choose your user name" name="email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="password" placeholder="New password" name="pwd">
+                                </div>
+                                <label style="font-size: small;">Date of birth</label>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <select class="form-control" id="sel1">
+                                              <option>1</option>
+                                              <option>2</option>
+                                              <option>3</option>
+                                              <option>4</option>
+                                              <option>5</option>
+                                              <option>6</option>
+                                              <option>7</option>
+                                              <option>8</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <select class="form-control" id="sel1">
+                                              <option>Jan</option>
+                                              <option>Feb</option>
+                                              <option>March</option>
+                                              <option>April</option>
+                                              <option>May</option>
+                                              <option>June</option>
+                                              <option>July</option>
+                                              <option>Aug</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <select class="form-control" id="sel1">
+                                              <option>2022</option>
+                                              <option>2023</option>
+                                              <option>2024</option>
+                                              <option>2025</option>
+                                              <option>2026</option>
+                                              <option>2027</option>
+                                              <option>2028</option>
+                                              <option>2019</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label style="font-size: small;">Gender</label>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="radio">
+                                            <label>Male   <input type="radio" name="optradio"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="radio">
+                                            <label>Female    <input type="radio" name="optradio"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="radio">
+                                            <label>Custom   <input type="radio" name="optradio"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p style="font-size: x-small;" >By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You may receive SMS notifications from us and can opt out at any time.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <script src="scripts/form-validation.js"></script>
+                            <button type="button" class="btn btn-success" onclick="register()">Register</button>
+                            </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
