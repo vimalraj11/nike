@@ -1,24 +1,33 @@
-.container-fulid .col-sm-5{
+.container-fulid .col-sm-5 {
     padding-top: 50px;
 }
-.container-fulid .col-sm-5 .text-primary{
+
+.container-fulid .col-sm-5 .text-primary {
     font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
-    font-size: 50px; 
+    font-size: 50px;
 }
-.container-fulid .col-sm-5 p{
+
+.container-fulid .col-sm-5 p {
     font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
     font-size: 28px;
 }
-.container-fulid .col-sm-3 .card{
+
+.container-fulid .col-sm-3 .card {
     width: 400px;
-    height:350px;
+    height: 350px;
     padding: 20px;
 }
-.card .btn-success{
+
+.card .btn-primary {
+    width: 100%;
+}
+
+.card .btn-success {
     position: relative;
     left: 25%;
 }
-.modal-footer .btn-success{
+
+.modal-footer .btn-success {
     position: relative;
     left: -40%;
 }
