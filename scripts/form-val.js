@@ -9,23 +9,32 @@ const gender = document.registration;
 function formValidation() {
     // checking length of name
     if (userName.value.length < 2 || userName.value.length > 20) {
-        alert("Name have more than 2 character");
+        document.getElementById("name-error").innerHTML = "Name is required";
+        document.getElementById("name-error").style.color = "red";
         userName.focus();
         return false;
     }
+    if (userName.value.length > 2){
+        document.getElementById("name-error").innerHTML = "Success";
+        document.getElementById("name-error").style.color = "green";
+    }
+
     if (userId.value.length < 7) {
-        alert("User ID have 7 character");
+        document.getElementById("username-error").innerHTML = "User ID have 7 character";
+        document.getElementById("username-error").style.color = "red";
         userId.focus();
         return false;
     }
     if (password.value.length < 5) {
-        alert("Password have more than 5 character");
+        document.getElementById("password-error").innerHTML = "Password have more than 5 character";
+        document.getElementById("password-error").style.color = "red";
         password.focus();
         return false;
     }
     // checking gender
     if (gender.gender.value === "") {
-        alert("Please select your gender!");
+        document.getElementById("gender-error").innerHTML = "Please select your gender!";
+        document.getElementById("gender-error").style.color = "red";
         return false;
     }
     uid = document.getElementById('userid').value;
